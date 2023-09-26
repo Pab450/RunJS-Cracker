@@ -1,0 +1,14 @@
+{
+  "name": "runjs-cracker",
+  "version": "1.0.0",
+  "description": "A tool for crack the RunJS application.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "crack": "node ."
+  },
+  "author": "pablooo",
+  "dependencies": {
+    "asar": "^3.2.0"
+  }
+}

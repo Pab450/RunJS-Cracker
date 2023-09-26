@@ -1,0 +1,4 @@
+{
+    "const t=s.cr": "return true;const t=s.cr",
+    "const t=u.h": "return (h.set({[v.autocomplete]:!0,[v.diagnostics]:!0,[v.signatures]:!0,[v.hoverInfo]:!0,[f.hasValidLicense]:!0,[f.licenseKey]:e,[f.newMachineId]:!0}),A.hasValidLicense=!0,w.emit('reload',{status:'ACTIVATION_COMPLETE'}),_().track('Activate'),g.VALID);const t=u.h"
+}
