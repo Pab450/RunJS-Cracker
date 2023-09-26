@@ -12,11 +12,11 @@ const matches = JSON.parse(fs.readFileSync('matches.json'));
 
 asar.extractAll(asarFile, tmpPath);
 
-const entryBundleContent = fs.readFileSync(entryBundlePath, "utf8");
+const entryBundleContent = fs.readFileSync(entryBundlePath, 'utf8');
 
 const entryBundleModifiedContent = entryBundleContent.replace(new RegExp(Object.keys(matches).join('|'), 'g'), (matched) => {
     return matches[matched];
-}) + "#pablooo";
+}) + '#pablooo';
 
 fs.writeFileSync(entryBundlePath, entryBundleModifiedContent);
 
