@@ -1,8 +1,9 @@
 import asar from 'asar';
 import path from 'path';
 import fs from 'fs';
+import os from 'os';
 
-const resourcesPath = '/Applications/RunJS.app/Contents/Resources/';
+const resourcesPath = os.platform() == 'win32' ? path.join(os.homedir(), 'Appdata\\Local\\Programs\\runjs\\resources') : '/Applications/RunJS.app/Contents/Resources/';
 
 const asarFile = path.join(resourcesPath, 'app.asar');
 const tmpPath = path.join(resourcesPath, 'tmp');
