@@ -1,8 +1,25 @@
 import asar from 'asar';
 import path from 'path';
 import fs from 'fs';
+import os from 'os';
 
-const resourcesPath = '/Applications/RunJS.app/Contents/Resources/';
+let resourcesPath;
+
+switch (os.platform()) {
+    case 'darwin':
+        resourcesPath = '/Applications/RunJS.app/Contents/Resources/';
+        break;
+
+    case 'win32':
+        resourcesPath = path.join(os.homedir(), 'Appdata\\Local\\Programs\\runjs\\resources');
+        break;
+
+    // Add support for other platforms here
+
+    default:
+        console.error('Unsupported platform, RunJS has not been cracked.');
+        process.exit(1);
+}
 
 const asarFile = path.join(resourcesPath, 'app.asar');
 const tmpPath = path.join(resourcesPath, 'tmp');
@@ -25,3 +42,5 @@ fs.writeFileSync(entryBundlePath, entryBundleModifiedContent);
 
     fs.rmSync(tmpPath, { recursive: true, force: true });
 })();
+
+console.log('RunJS has been cracked.');

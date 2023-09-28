@@ -5,7 +5,7 @@ The version of **RunJS** currently supported by this tool is **2.9.0**.
 
 However, it is possible to crack all versions of **RunJS** if you know the mappings to be modified. All you need to do is update the JSON file containing the mappings.
 
-For the moment, **the tool only works on macOS**. An update will be released shortly to support Windows. But if you're a tinkerer, you can easily make it work on any OS.
+For the moment, **the tool only works on macOS and Windows**. An update will be released shortly to support **Linux**. But if you're a tinkerer, you can easily make it work on any OS.
 ## Prerequisite
 Before you start, make sure you have the following items installed and ready:
 
