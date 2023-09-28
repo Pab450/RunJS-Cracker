@@ -7,7 +7,7 @@ let resourcesPath;
 
 switch (os.platform()) {
     case 'darwin':
-        resourcesPath = '/Applications/RunJS.app/Contents/Resources/';
+        resourcesPath = '/Applications/RunJS.app/Contents/Resources';
         break;
 
     case 'win32':
@@ -41,6 +41,6 @@ fs.writeFileSync(entryBundlePath, entryBundleModifiedContent);
     await asar.createPackage(tmpPath, asarFile);
 
     fs.rmSync(tmpPath, { recursive: true, force: true });
-})();
 
-console.log('RunJS has been cracked.');
+    console.log('RunJS has been cracked.');
+})();
