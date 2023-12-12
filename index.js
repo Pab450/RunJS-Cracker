@@ -16,8 +16,8 @@ switch (os.platform()) {
 
     // Add support for other platforms here
     case 'linux':
-    resourcesPath = '/opt/RunJS/resources';
-    break;
+        resourcesPath = '/opt/RunJS/resources';
+        break;
     
     default:
         console.error('Unsupported platform, RunJS has not been cracked.');
