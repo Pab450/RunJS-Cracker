@@ -14,10 +14,11 @@ switch (os.platform()) {
         resourcesPath = path.join(os.homedir(), 'Appdata\\Local\\Programs\\runjs\\resources');
         break;
 
-    // Add support for other platforms here
     case 'linux':
         resourcesPath = '/opt/RunJS/resources';
         break;
+
+    // Add support for other platforms here
     
     default:
         console.error('Unsupported platform, RunJS has not been cracked.');
