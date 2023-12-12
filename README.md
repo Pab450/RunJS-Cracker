@@ -1,11 +1,13 @@
 # RunJS Cracker
 A tool to crack the [RunJS application](https://runjs.app/).
+> [!IMPORTANT]
+> This tool provides access to all RunJS features with any activation key, for example: ```Merry Christmas RunJS```.
 
 The version of **RunJS** currently supported by this tool is **2.9.0**.
 
 However, it is possible to crack all versions of **RunJS** if you know the mappings to be modified. All you need to do is update the JSON file containing the mappings.
 
-For the moment, **the tool works on macOS and Windows**. An update will be released shortly to support **Linux**. But if you're a tinkerer, you can easily make it work on any OS.
+The tool works on macOS, Windows and Linux (**Ubuntu**, **Manjaro**), is not guaranteed to work on all Linux platforms.
 ## Prerequisite
 Before you start, make sure you have the following items installed and ready:
 
@@ -29,10 +31,8 @@ npm install
 ```
 4 - **Run the crack**: After the installation is complete, execute the following command to run the crack script:
 ```
-npm run crack
-
-// Add sudo for linux (tested on ubuntu)
 sudo npm run crack
 ```
 ### **That's it! Now enter any activation key to access all RunJS features without restrictions**.
-*Please be aware that this script is provided exclusively for educational purposes. Any usage for alternative purposes absolves the author of any legal responsibility*.
+> [!CAUTION]
+> *Please be aware that this script is provided exclusively for educational purposes. Any usage for alternative purposes absolves the author of any legal responsibility*.
