@@ -30,6 +30,9 @@ npm install
 4 - **Run the crack**: After the installation is complete, execute the following command to run the crack script:
 ```
 npm run crack
+
+// Add sudo for linux (tested on ubuntu)
+sudo npm run crack
 ```
 ### **That's it! Now enter any activation key to access all RunJS features without restrictions**.
 *Please be aware that this script is provided exclusively for educational purposes. Any usage for alternative purposes absolves the author of any legal responsibility*.
