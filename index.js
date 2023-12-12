@@ -46,5 +46,5 @@ fs.writeFileSync(entryBundlePath, entryBundleModifiedContent);
 
     fs.rmSync(tmpPath, { recursive: true, force: true });
 
-    console.log('RunJS has been cracked.');
+    console.log('RunJS has been cracked. Now enter any activation key to access all RunJS features without restrictions.');
 })();
