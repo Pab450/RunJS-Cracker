@@ -33,11 +33,15 @@ const matches = JSON.parse(fs.readFileSync('matches.json'));
 
 asar.extractAll(asarFile, tmpPath);
 
+const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 const entryBundleContent = fs.readFileSync(entryBundlePath, 'utf8');
 
-const entryBundleModifiedContent = entryBundleContent.replace(new RegExp(Object.keys(matches).join('|'), 'g'), (matched) => {
+const entryBundleModifiedContent = entryBundleContent.replace(new RegExp(Object.keys(matches).map(escapeRegExp).join('|'), 'g'), (matched) => {
+    console.log(`Replacing ${matched} with ${matches[matched]}`);
+
     return matches[matched];
-}) + '#pablooo';
+});
 
 fs.writeFileSync(entryBundlePath, entryBundleModifiedContent);
 
@@ -46,5 +50,5 @@ fs.writeFileSync(entryBundlePath, entryBundleModifiedContent);
 
     fs.rmSync(tmpPath, { recursive: true, force: true });
 
-    console.log('RunJS has been cracked. Now enter any activation key to access all RunJS features without restrictions.');
+    console.log('\nRunJS has been cracked. Launch the application once, close it and launch it again to access all RunJS features without restrictions.');
 })();
