@@ -1,15 +1,5 @@
 {
-    "l.hasValidLicense": "true",
-    "p.hasValidLicense": "true",
-    "q.hasValidLicense": "true",
-    "S={hasValidLicense:!1}": "S={hasValidLicense:true}",
-    "S.hasValidLicense=!1": "S.hasValidLicense=true",
-    "s01.set(f.hasValidLicense,!1)": "s01.set(f.hasValidLicense,true)",
-    "S.hasValidLicense=!(!": "S.hasValidLicense=true||!(!",
-    "d.hasValidLicense": "true",
-    "j.hasValidLicense": "true",
-    "g.hasValidLicense": "true",
-    "u.hasValidLicense": "true",
-    "i.hasValidLicense": "true",
-    "e.hasValidLicense": "true"
+    "(\\w+)\\.set\\((\\w+)\\.hasValidLicense,(!1|false)\\)": "$0.set($1.hasValidLicense,true)",
+    "(\\w+)=\\{hasValidLicense:(!1|false)\\}": "$0={hasValidLicense:true}",
+    "(\\w+)\\.hasValidLicense(?![=,])": "true"
 }

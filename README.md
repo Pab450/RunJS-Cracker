@@ -3,7 +3,10 @@ A tool to crack the [RunJS application](https://runjs.app/).
 > [!IMPORTANT]
 > This tool provides access to all RunJS features.
 
-The version of **RunJS** currently supported by this tool is **2.10.1**.
+The version of **RunJS** currently supported by this tool is **2.11.0** and certainly more...
+
+> [!NOTE]
+> Thank you all for your ⭐️, feel free to follow and add a star if you haven't already !
 
 However, it is possible to crack all versions of **RunJS** if you know the mappings to be modified. All you need to do is update the JSON file containing the mappings.
 

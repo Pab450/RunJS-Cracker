@@ -33,15 +33,17 @@ const matches = JSON.parse(fs.readFileSync('matches.json'));
 
 asar.extractAll(asarFile, tmpPath);
 
-const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
 const entryBundleContent = fs.readFileSync(entryBundlePath, 'utf8');
 
-const entryBundleModifiedContent = entryBundleContent.replace(new RegExp(Object.keys(matches).map(escapeRegExp).join('|'), 'g'), (matched) => {
-    console.log(`Replacing ${matched} with ${matches[matched]}`);
+const entryBundleModifiedContent = Object.entries(matches).reduce((acc, [key, value]) => {
+    return acc.replace(new RegExp(key, 'g'), (matched, ...groups) => {
+        const replacementValue = value.replace(/\\?\$(\d+)/g, (_, index) => groups[index] || '');
 
-    return matches[matched];
-});
+        console.log(`Replacing ${matched} with ${replacementValue}`);
+
+        return replacementValue;
+    });
+}, entryBundleContent);
 
 fs.writeFileSync(entryBundlePath, entryBundleModifiedContent);
 
